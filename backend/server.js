@@ -1,22 +1,29 @@
 const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
+const mongoose = require('mongoose');
+const Student = require('./models/Student');
 
-dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 5000;
+app.use(express.json()); // Middleware to parse JSON
 
-// Connect to DB
-connectDB();
-
-// Middleware
-app.use(express.json());
-
-// Test route
-app.get('/ping', (req, res) => {
-    res.send('pong');
+mongoose.connect("mongodb://localhost:27017/markit_db", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => {
+    console.log("✅ MongoDB Connected");
+}).catch((err) => {
+    console.error("❌ DB connection failed:", err.message);
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+app.post('/students', async (req, res) => {
+    try {
+        const student = new Student(req.body);
+        const savedStudent = await student.save();
+        res.status(201).json(savedStudent);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+app.listen(5000, () => {
+    console.log("🚀 Server running on http://localhost:5000");
 });
