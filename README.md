@@ -9,6 +9,8 @@ The Student Attendance Management System (SAMS) is a full-stack web application 
 Built with a scalable backend architecture using Node.js and Express.js, and powered by MongoDB for flexible and efficient document storage, SAMS enables real-time data handling and centralized control over institutional attendance workflows.
 
 🎯 Core Features
+![Project Screenshot](./img2.png)
+
 1)User Authentication & Role Management
   * Secure login system using JWT with distinct roles: Admin and Lecturer.
   * Access control to ensure users interact only with permitted modules.
@@ -33,6 +35,8 @@ Built with a scalable backend architecture using Node.js and Express.js, and pow
 7)Dynamic Attendance Reporting
  * Generate attendance reports by student, subject, or date range.
  * Supports data filtering and export-ready formats (e.g., CSV or PDF).
+
+![Project Screenshot](./img3.png)
 
 🏗️ Technical Highlights
 
