@@ -1,6 +1,9 @@
 📘 Markit - Student Attendance Management System (SAMS)
 Tech Stack: Node.js, Express.js, MongoDB, Mongoose, TypeScript, JWT Authentication
 
+![Project Screenshot](./img1.png)
+
+
 🧩 Project Overview
 The Student Attendance Management System (SAMS) is a full-stack web application designed to streamline the process of tracking, managing, and reporting student attendance in educational institutions. The system provides role-based access for administrators and lecturers to manage academic activities such as course creation, student and lecturer management, class scheduling, attendance marking, and report generation.
 Built with a scalable backend architecture using Node.js and Express.js, and powered by MongoDB for flexible and efficient document storage, SAMS enables real-time data handling and centralized control over institutional attendance workflows.
